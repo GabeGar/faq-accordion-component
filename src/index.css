@@ -38,7 +38,7 @@
     align-items: center;
 
     padding: 7rem 1rem 0rem 1rem;
-    background-image: linear-gradient(0deg, var(--primary-soft-blue), var(--primary-soft-violet) 50%);
+    background-image: linear-gradient(0deg, var(--primary-soft-blue), var(--primary-soft-violet) 80%);
 }
 
 .card {
@@ -56,8 +56,9 @@
     transform: translateY(-50%);
 }
 
-.illustration>img:first-child {
-    position: relative;
+
+img {
+    max-width: 30rem;
 }
 
 .illustration>img:last-child {
@@ -124,4 +125,66 @@
 .arrow.flip>img {
     transform: rotate(-180deg);
     transition: transform 225ms ease-in-out;
+}
+
+@media (min-width: 986px) {
+
+    .page {
+        flex-direction: row;
+    }
+
+    .card {
+        overflow: hidden;
+        min-width: 60rem;
+        padding: 5rem 0;
+        flex-direction: row;
+    }
+
+    .faq {
+        max-width: 25em;
+        min-width: 25em;
+        padding-top: 3rem;
+    }
+
+    .faq .QnA:last-child {
+        margin-bottom: 0;
+    }
+
+    .faq h1 {
+        align-self: flex-start;
+    }
+
+    .illustration-desktop {
+        position: relative;
+    }
+
+    .outer {
+        width: 100%;
+        max-width: 30em;
+        display: flex;
+    }
+
+    .outer img:first-child {
+        transform: translate(-30%);
+        z-index: 2;
+    }
+
+    .outer img:nth-child(2) {
+        position: absolute;
+        transform: translate(-65%, -40%);
+        max-width: 70rem;
+    }
+
+    .outer img:last-child {
+        position: fixed;
+        transform: translate(-92%, 75%);
+        z-index: 99;
+    }
+}
+
+@media (hover:hover) and (pointer:fine) {
+    .QnA>:hover:has(.question) {
+        color: var(--primary-soft-red);
+        transition: color ease-in-out 100ms;
+    }
 }
