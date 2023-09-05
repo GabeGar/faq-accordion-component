@@ -11,8 +11,15 @@ import FAQSection from "./components/FAQSection";
 
 import data from "./json/faq.json";
 
+const setViewPortForDesktopOrMobile = () => {
+    if (window.innerWidth >= 986) false;
+    if (window.innerWidth < 986) true;
+};
+
 const App = () => {
-    const [isViewPortMobile, setIsViewPortMobile] = useState(false);
+    const [isViewPortMobile, setIsViewPortMobile] = useState(() =>
+        setViewPortForDesktopOrMobile()
+    );
     const [currentAnswerId, setCurrentAnswerID] = useState(null);
     const { faq } = data;
 
