@@ -30,10 +30,6 @@
     box-sizing: border-box;
 }
 
-img {
-    max-width: 100%;
-}
-
 .page {
     min-height: 100dvh;
     display: flex;
