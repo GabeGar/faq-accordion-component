@@ -56,11 +56,6 @@
     transform: translateY(-50%);
 }
 
-
-img {
-    max-width: 30rem;
-}
-
 .illustration>img:last-child {
     margin-top: -5em;
 }
